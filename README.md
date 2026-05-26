@@ -1,10 +1,16 @@
-# 小米笔记导出工具
+<h1 align="center">
+  小米笔记导出工具
+</h1>
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/Horizen5/mi-notes-exporter)
-![GitHub stars](https://img.shields.io/github/stars/Horizen5/mi-notes-exporter)
-![GitHub forks](https://img.shields.io/github/forks/Horizen5/mi-notes-exporter)
-![GitHub issues](https://img.shields.io/github/issues/Horizen5/mi-notes-exporter)
-![License](https://img.shields.io/github/license/Horizen5/mi-notes-exporter)
+<h3 align="center">批量导出小米云服务笔记的 Chrome 浏览器扩展</h3>
+
+<p align="center">
+  Languages:
+  <a href="./README.md">简体中文</a> ·
+  <a href="./docs/README_en.md">English</a>
+</p>
+
+---
 
 一个用于批量导出小米云服务笔记的 Chrome 浏览器扩展工具。支持导出为 Markdown 格式，自动下载笔记中的图片，支持文件夹选择、暂停/继续功能。
 
@@ -43,6 +49,7 @@ git clone https://github.com/Horizen5/mi-notes-exporter.git
 ### 3. 浏览器兼容性
 
 本扩展支持所有基于 Chromium 的浏览器：
+
 - Chrome 90+
 - Edge 90+
 - Brave
@@ -68,17 +75,20 @@ git clone https://github.com/Horizen5/mi-notes-exporter.git
 在侧边栏中可以配置以下选项：
 
 #### 文件夹选择
+
 - 点击「刷新文件夹列表」获取当前所有文件夹
 - 勾选你需要导出的文件夹
 - 支持「全选/取消全选」
 
 #### 导出设置
+
 - **导出类型**：
   - 完整导出（含图片）：导出笔记内容并下载所有图片
   - 纯文本导出：只导出文字内容，不下载图片
 - **图片文件夹名称**：设置保存图片的文件夹名称（默认为 `images`）
 
 #### 反爬虫设置（建议保持默认）
+
 - **最小延迟**：每次操作之间的最小等待时间（毫秒），默认 1000ms
 - **最大延迟**：每次操作之间的最大等待时间（毫秒），默认 3000ms
 - **批量大小**：每处理多少条笔记后强制休息，默认 30 条
@@ -103,11 +113,11 @@ git clone https://github.com/Horizen5/mi-notes-exporter.git
 
 ```
 下载目录/
-├── 文件夹名1.md              # Markdown 格式的笔记文件
+├── 文件夹名1.md          # Markdown 格式的笔记文件
 ├── 文件夹名2.md
-├── mi_note_文件夹名1.json    # 原始 JSON 数据
+├── mi_note_文件夹名1.json # 原始 JSON 数据
 ├── mi_note_文件夹名2.json
-└── images/                   # 图片文件夹
+└── images/               # 图片文件夹
     ├── 文件夹_YYMMDD_NoteID_1.jpg
     ├── 文件夹_YYMMDD_NoteID_2.jpg
     └── ...
@@ -159,6 +169,7 @@ git clone https://github.com/Horizen5/mi-notes-exporter.git
 ### Q: 导出过程中页面卡住不动怎么办？
 
 **A:** 请尝试以下方法：
+
 1. 确保小米云服务页面保持在前台
 2. 不要最小化浏览器窗口
 3. 适当增加延迟时间设置
@@ -167,6 +178,7 @@ git clone https://github.com/Horizen5/mi-notes-exporter.git
 ### Q: 有些图片下载失败怎么办？
 
 **A:** 图片下载失败的常见原因：
+
 1. 网络不稳定 - 检查网络连接
 2. 图片已被删除 - 笔记中的图片可能已失效
 3. 小米云服务限制 - 尝试增加延迟时间
@@ -175,6 +187,7 @@ git clone https://github.com/Horizen5/mi-notes-exporter.git
 ### Q: 如何避免被反爬虫检测？
 
 **A:** 建议配置：
+
 - 增加最小/最大延迟时间
 - 减小批量大小
 - 增加批量休息时间
@@ -183,6 +196,7 @@ git clone https://github.com/Horizen5/mi-notes-exporter.git
 ### Q: 导出中断后可以继续吗？
 
 **A:** 目前版本每次导出都是全新开始，不支持断点续传。但你可以：
+
 1. 记录已导出的文件夹
 2. 下次只选择未导出的文件夹
 3. 或者重新导出（会覆盖同名文件）
@@ -215,7 +229,7 @@ git clone https://github.com/Horizen5/mi-notes-exporter.git
 批量休息: 10000ms
 ```
 
-注意：快速配置可能导致被小米云服务限制访问，请谨慎使用。
+> 注意：快速配置可能导致被小米云服务限制访问，请谨慎使用。
 
 ## 🔧 技术细节
 
@@ -236,12 +250,14 @@ git clone https://github.com/Horizen5/mi-notes-exporter.git
 ### 文件命名过滤
 
 自动过滤文件名中的特殊字符：
+
 - `[ ] 【 】 ( ) （ ）` 等括号和空格会被移除
 - `\ / : * ? " < > |` 等非法字符会被替换为 `_`
 
 ## 📋 更新日志
 
 ### v1.9.4
+
 - 优化了笔记提取的稳定性
 - 改进了图片下载机制
 - 添加了扫尾回旋功能，减少漏单
@@ -249,6 +265,7 @@ git clone https://github.com/Horizen5/mi-notes-exporter.git
 - 改进了登录状态保持
 
 ### v1.0.0
+
 - 初始版本发布
 - 支持基本的笔记导出功能
 - 实现图片下载功能
@@ -258,6 +275,7 @@ git clone https://github.com/Horizen5/mi-notes-exporter.git
 ## 📧 反馈与支持
 
 如果你遇到问题或有建议，欢迎：
+
 - 在 [GitHub Issues](https://github.com/Horizen5/mi-notes-exporter/issues) 中反馈
 - 查看浏览器控制台（F12）的错误信息
 - 检查扩展侧边栏的日志输出
@@ -277,10 +295,6 @@ git clone https://github.com/Horizen5/mi-notes-exporter.git
 
 MIT License
 
----
-
-**提示**：使用前请确保你已备份重要数据，以防万一！
-
----
+> **提示**：使用前请确保你已备份重要数据，以防万一！
 
 ⭐ 如果这个工具对你有帮助，请给个 Star！
