@@ -1,8 +1,8 @@
 <h1 align="center">
-  小米笔记导出工具
+  <img src="./icon.png" alt="Mi Notes Exporter" width="96" />
 </h1>
 
-<h3 align="center">批量导出小米云服务笔记的 Chrome 浏览器扩展</h3>
+<h3 align="center">小米笔记导出工具</h3>
 
 <p align="center">
   Languages:

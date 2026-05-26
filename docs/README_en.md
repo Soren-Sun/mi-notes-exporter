@@ -1,8 +1,8 @@
 <h1 align="center">
-  Mi Notes Exporter
+  <img src="../icon.png" alt="Mi Notes Exporter" width="96" />
 </h1>
 
-<h3 align="center">A Chrome Extension for Batch Exporting Xiaomi Cloud Notes</h3>
+<h3 align="center">Mi Notes Exporter</h3>
 
 <p align="center">
   Languages:
